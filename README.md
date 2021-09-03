@@ -3,7 +3,7 @@
 ```
  1. Clone the repo
  2. npm i
- 3. npm prepare
+ 3. npm run prepare
  4. change -> commit -> enjoy
 
 ```

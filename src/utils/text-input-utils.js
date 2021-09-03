@@ -6,11 +6,7 @@ const EMAIL =
 
 /** check if a valid phone number */
 const isValidPhoneNumber = (phoneNumber) => {
-  return (
-    PHONE_NUMBER_FORMAT.test(phoneNumber) &&
-    phoneNumber.length <= 10 &&
-    phoneNumber.length >= 7
-  );
+  return PHONE_NUMBER_FORMAT.test(phoneNumber) && phoneNumber.length <= 10 && phoneNumber.length >= 7;
 };
 
 /** check if it is the valid email or not */
@@ -29,8 +25,7 @@ const getRandomInt = (max) => {
 const fullNumbers = (text) => text.replace(/[^0-9]/g, '');
 const getMaskedDigit = (value) => (value ? '*' : '');
 /** handles keyboard backspace event */
-const onKeyPressEvent = (nativeEvent, value, nextFocus) =>
-  nativeEvent.key === 'Backspace' ? (value === '' ? nextFocus.focus() : {}) : {};
+const onKeyPressEvent = (nativeEvent, value, nextFocus) => (nativeEvent.key === 'Backspace' ? (value === '' ? nextFocus.focus() : {}) : {});
 
 export const TextInputUtils = {
   fullNumbers,

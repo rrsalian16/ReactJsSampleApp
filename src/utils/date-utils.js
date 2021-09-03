@@ -6,8 +6,7 @@ import { DateConstants } from './date-constants';
  * @param {*} dateString
  * @param {*} dateFormat
  */
-const getFormattedDate = (dateString, dateFormat) =>
-  moment(dateString).format(dateFormat);
+const getFormattedDate = (dateString, dateFormat) => moment(dateString).format(dateFormat);
 
 /**
  * Returns the input time stamp date in the format of dateFormat
@@ -15,8 +14,7 @@ const getFormattedDate = (dateString, dateFormat) =>
  * @param {*} dateFormat
  */
 // eslint-disable-next-line max-len
-const getFormattedDateFromTimestamp = (timestamp, dateFormat) =>
-  moment(new Date(timestamp)).format(dateFormat);
+const getFormattedDateFromTimestamp = (timestamp, dateFormat) => moment(new Date(timestamp)).format(dateFormat);
 
 /**
  * method returns the tme as minutes, hours and standard time
@@ -50,9 +48,7 @@ const displayTime = (datestring, dateType, dateFormat) => {
  * Get date after n number of days * */
 const getDateAfterDays = (days) => {
   let minimumDate = new Date();
-  minimumDate = moment(minimumDate)
-    .add(days, 'days')
-    .format(DateConstants.DATE_TYPE_DD_MM_YYYY_SLASH);
+  minimumDate = moment(minimumDate).add(days, 'days').format(DateConstants.DATE_TYPE_DD_MM_YYYY_SLASH);
   return minimumDate;
 };
 
@@ -66,9 +62,7 @@ const convertSecondstoTime = (totalSeconds) => {
   const minutes = dateObj.getUTCMinutes();
   const seconds = dateObj.getSeconds();
 
-  const timeString = `${minutes.toString().padStart(2, '0')}:${seconds
-    .toString()
-    .padStart(2, '0')}`;
+  const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
   return timeString;
 };
