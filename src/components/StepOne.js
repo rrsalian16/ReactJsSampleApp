@@ -1,4 +1,13 @@
-import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField, Typography } from '@material-ui/core';
+import {
+  Button,
+  FormControl,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  OutlinedInput,
+  TextField,
+  Typography,
+} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import SendSharpIcon from '@material-ui/icons/SendSharp';
 import Visibility from '@material-ui/icons/Visibility';
@@ -6,7 +15,7 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import '../App.css';
+import '../App.scss';
 import useForm from './useForm';
 
 const useStyles = makeStyles({
